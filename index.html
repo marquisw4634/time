@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- CRITICAL: This exact viewport tag must match the app's tag to trigger your mobile CSS inside the iframe -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     
-    <title>Oakwood Time Tracker</title>
+    <title>Time Tracker</title>
     
     <style>
         /* Reset all margins and prevent the parent page from scrolling */
@@ -27,20 +28,15 @@
         iframe {
             border: none;
             width: 100%;
-            height: 100%; 
-            margin-top: 0;
-            
-            
-            /* If the touch targets on your mobile device get misaligned, DELETE the two lines above and use this instead:
-            height: 100%; 
-            margin-top: 0;
-            */
+            height: 100%;
+            display: block;
         }
     </style>
 </head>
 <body>
 
     <div class="iframe-container">
+        <!-- Replace the src URL with your published Google Apps Script Web App URL -->
         <iframe 
             src="https://script.google.com/macros/s/AKfycbwbdwQlduJ1Y9IAn2qPHwyxkx1v2m6v1R250O9OcDv-4DR5-nOnW7wXXtwQFDhrR0Y7/exec" 
             allowfullscreen="true"
